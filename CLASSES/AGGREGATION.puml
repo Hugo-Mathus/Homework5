@@ -1,0 +1,69 @@
+@startuml
+
+class Course{
+    -String courseName
+    -Instructor instructor1;
+    -Instructor instructor2;
+    -Textbook textbook1;
+    -Textbook textbook2;
+
+    ==Constructor==
+    +Course(String courseName,
+        Instructor instructor1,
+        Instructor instructor2,
+        Textbook textbook1,
+        Textbook textbook2)
+
+    ==Setter==
+    +String getCourseName()
+    +Instructor getInstructor1()
+    +Instructor getInstructor2()
+    +public Textbook getTextbook1()
+    +public Textbook getTextbook2()
+
+    ==Getter==
+    +void setCourseName(String: Name)
+    +void setInstructor1(Instructor: instructor1)
+    +void setInstructor2(Instructor: instructor2)
+    +void setTextbook1(Textbook: textbook1 )
+    +void setTextbook2(Textbook: textbook2)
+}
+
+class TextBook{
+    -String title
+    -String author
+    -String publisher
+
+==Constructor==
+    + TextBook(String: title, String: author, String: publish)
+==Getters==
+    + String getTitle()
+    + String getAuthor()
+    + String setPublisher()
+==Setters==
+    + void setTitle(String title)
+    + void setAuthor(String author)
+    + void setPublisher(String publisher)
+}
+class Instructor{
+    -String firstName;
+    -String lastName;
+    -String officeNumber;
+==Constructor==
+     +Instructor(String firstName,
+                    String lastName,
+                    String officeNumber)
+==Getters==
+    +String getFirstName()
+    +String getLastName()
+    +String getOfficeNumber()
+==Setters==
+    +void setFirstName(String firstName)
+    +void setLastName(String lastName)
+    +void setOfficeNumber(String officeNumber)
+}
+
+Course o-- TextBook
+Course o-- Instructor
+
+@enduml

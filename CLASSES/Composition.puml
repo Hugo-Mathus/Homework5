@@ -1,0 +1,38 @@
+@startuml
+
+class Folder{
+
+    -String Name
+    -ArrayList<File> File
+    -ArrayList<Folder> subFolders
+
+==CONSTRUCTOR==
+    +Folder(String name)
+==SETTERS==
+    +void setName(String name)
+==GETTERS==
+    +String getName()
+    +ArrayList<File> getFiles()
+    +ArrayList<Folder> getSubFolders()
+==MORE FEATURES==
+
+    +void addFile(File file)
+    +void addSubFolder(Folder folder)
+    +void removeSubFolder(String folderName)
+}
+
+class File{
+    +String name
+==CONSTRUCTOR==
+    +File(String name)
+==SETTERS==
+    +void setName(String name)
+==GETTERS==
+    +String getName()
+==PRINT==
+    +void Print()
+}
+
+Folder *-- File
+
+@enduml

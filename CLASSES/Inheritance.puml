@@ -1,0 +1,64 @@
+@startuml
+
+class Employee{
+    -String FirstName
+    -String LastName
+    -String Social_Security_Number
+    ==Constructor==
+    + Employee(String: FirstName, String: LastName, String: SSN)
+    ==Getters==
+    +String getFirstName()
+    +String getFirstName()
+    +String getFirstName()
+    ==Setters==
+    +void setFirstName(String: FirstName)
+    +void setLastName(String: LastName)
+    +void setSocialSecurityNumber(String)
+}
+
+class SalariedEmployee{
+    -Weekly_salary: double
+    ==Getters==
+    +String getWeeklySalary()
+    ==Setters==
+    +void setWeeklySalary(double: weekly_salary)
+}
+
+class HourlyEmployee{
+    -Wage: double
+    -Hours_worked: int
+    ==Getters==
+    +double getWage()
+    +int getHours_worked()
+    ==Setters==
+    +void setWage(double: wage)
+    +void setWage(int: Hours_worked)
+
+}
+class CommissionEmployee{
+    -Commission_Rate: double
+    -Gross_Sales: double
+    ==Getters==
+    +double getCommissionRate()
+    +double getGrossSales()
+    ==Setters==
+    +void setCommissionRate(double: Commission_Rate)
+    +void setGrossSales(int: Gross_Sales)
+
+}
+class BaseEmployee{
+    -Base_salary: double
+    ==Getters==
+    +String getBaseSalary()
+    ==Setters==
+    +void setBaseSalary(double Base_salary)
+}
+
+
+
+Employee <|-- SalariedEmployee
+Employee <|--- HourlyEmployee
+Employee <|--- CommissionEmployee
+Employee <|-- BaseEmployee
+
+@enduml

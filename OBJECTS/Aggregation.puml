@@ -1,0 +1,32 @@
+@startuml
+
+object "textbook1 : Textbook" as textbook1{
+    -title = Clean Code
+    -author = Robert C. Martin
+    -publisher = Prentice Hall
+}
+object "textbook2 : Textbook" as textbook2{
+    -title = The boy who was raised as a dog
+    -author = Hugo Mathus
+    -publisher = Pearson
+}
+object "instructor1 : Instructor" as instructor1{
+    -firstName = Nima
+    -lastName = Davarpanah
+    -officeNumber = BD9 - 302
+}
+object "instructor2 : Instructor" as instructor2{
+    -firstName = Ana
+    -lastName = Smith
+    -officeNumber = BD8-102
+}
+
+object "course : Course" as course {
+     courseName = CS3560
+}
+
+textbook1 --o course::Textbook1
+textbook2 --o course::Textbook2
+instructor1 --o course::Instructor1
+instructor2 --o course::Instructor2
+@enduml
