@@ -1,19 +1,19 @@
 @startuml
 
-object "textbook1 : Textbook" as textbook1{
+object "<u>textbook1 : Textbook</u>" as textbook1{
     -title = Clean Code
     -author = Robert C. Martin
     -publisher = Prentice Hall
 }
 
-object "instructor1 : Instructor" as instructor1{
+object "<u>instructor1 : Instructor</u>" as instructor1{
     -firstName = Nima
     -lastName = Davarpanah
     -officeNumber = BD9 - 302
 }
 
 
-object "course : Course" as course {
+object "<u>course : Course</u>" as course {
      courseName = CS3560
 }
 

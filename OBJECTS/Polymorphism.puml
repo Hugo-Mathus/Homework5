@@ -1,17 +1,17 @@
 @startuml
 
-object "ship1 : Ship" as ship1{
+object "<u>ship1 : Ship</u>" as ship1{
     name = Titanic
     Year built = 2000
 }
 
-object "ship2 : CruiseShip" as ship2{
+object "<u>ship2 : CruiseShip</u>" as ship2{
     name = Royal Caribbean
     Year built = 1998
     Max Capacity = 6680
 }
 
-object "ship3 : CargoShip" as ship3{
+object "<u>ship3 : CargoShip</u>" as ship3{
     name = Maerks Line
     Year built = 2026
     Tonnage = 199000
