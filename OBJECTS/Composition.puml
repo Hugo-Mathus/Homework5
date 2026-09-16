@@ -1,0 +1,50 @@
+@startuml
+object "php_demo1 : Folder" as php_demo1{
+    name = php_demo1
+    Folders[Source Files] subFolders
+    Files[] files
+}
+
+object "Source Files : Folder" as Source_Files{
+    name = Source_Files
+    Folders[.phalcon, cache, public] subFolders
+    Files[] files
+}
+object ".phalcon : Folder" as .phalcon{
+    name = .phalcon
+    Folders[Source Files] subFolders
+    Files[] files
+}
+object "cache : Folder" as cache{
+    name = cache
+    Folders[] subFolders
+    Files[] files
+}
+object "public : Folder" as public{
+    name = public
+    Folders[] subFolders
+    Files[.htaccess, .htrouter.php, index.html] files
+}
+
+object ".htaccess : File" as .htaccess{
+    name = .htaccess
+}
+object ".htrouter.php : File" as .htrouter{
+    name = .htrouter.php
+}
+object "index.html : File" as index{
+    name = index.html
+}
+
+
+php_demo1*--Source_Files
+
+Source_Files*--phalcon
+Source_Files*--cache
+Source_Files*--public
+
+public*-- .htaccess
+public*-- .htrouter
+public *-- index
+
+@enduml
