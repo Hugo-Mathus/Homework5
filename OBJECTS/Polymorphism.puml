@@ -5,16 +5,29 @@ object "<u>ship1 : Ship</u>" as ship1{
     Year built = 2000
 }
 
-object "<u>ship2 : CruiseShip</u>" as ship2{
+
+object "<u>ship2 : Ship</u>" as ship2{
     name = Royal Caribbean
     Year built = 1998
+
+}
+
+object "<u>ship2 : CruiseShip</u>" as CruiseShip{
     Max Capacity = 6680
 }
 
-object "<u>ship3 : CargoShip</u>" as ship3{
+
+object "<u>ship3 : Ship</u>" as ship3{
     name = Maerks Line
     Year built = 2026
+}
+
+object "<u>ship3 : CargoShip</u>" as CargoShip{
     Tonnage = 199000
 }
+
+
+ship2 <|-- CruiseShip
+ship3 <|-- CargoShip
 
 @enduml
